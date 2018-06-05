@@ -38,41 +38,39 @@ class GT_Typography {
 	 */
 	static function setup() {
 
-		// Setup Constants.
-		self::constants();
-
 		// Setup Translation.
 		add_action( 'plugins_loaded', array( __CLASS__, 'translation' ) );
 
-		// Include Files.
-		self::includes();
+		// Add fonts to the default font list in Customizer.
+		add_filter( 'gt_typography_fonts', array( __CLASS__, 'add_fonts' ) );
 
-		// Setup Action Hooks.
-		self::setup_actions();
-
+		// Load fonts in frontend.
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_fonts' ), 1 );
 	}
 
 	/**
-	 * Setup plugin constants
+	 * The list of fonts.
 	 *
-	 * @return void
+	 * @return array $fonts List of fonts.
 	 */
-	static function constants() {
+	static function fonts() {
 
-		// Define Plugin Name.
-		define( 'GTT_NAME', 'GT Typography' );
+		$fonts = array(
+			'Amaranth'      => 'Amaranth',
+			'Lato'          => 'Lato',
+			'Montserrat'    => 'Montserrat',
+			'Muli'          => 'Muli',
+			'Open Sans'     => 'Open Sans',
+			'Oswald'        => 'Oswald',
+			'PT Sans'       => 'PT Sans',
+			'Raleway'       => 'Raleway',
+			'Rambla'        => 'Rambla',
+			'Roboto'        => 'Roboto',
+			'Titillium Web' => 'Titillium Web',
+			'Ubuntu'        => 'Ubuntu',
+		);
 
-		// Define Version Number.
-		define( 'GTT_VERSION', '1.0' );
-
-		// Plugin Folder Path.
-		define( 'GTT_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-
-		// Plugin Folder URL.
-		define( 'GTT_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-
-		// Plugin Root File.
-		define( 'GTT_PLUGIN_FILE', __FILE__ );
+		return $fonts;
 	}
 
 	/**
@@ -82,49 +80,91 @@ class GT_Typography {
 	 */
 	static function translation() {
 
-		load_plugin_textdomain( 'gt-typography', false, dirname( plugin_basename( GTT_PLUGIN_FILE ) ) . '/languages/' );
+		load_plugin_textdomain( 'gt-typography', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	}
 
 	/**
-	 * Include required files
+	 * Add new fonts to the default font list in Customizer.
 	 *
-	 * @return void
+	 * @return array $fonts List of fonts.
 	 */
-	static function includes() {
+	static function add_fonts( $fonts ) {
 
-		// Include Settings Classes.
-		#require_once GTT_PLUGIN_DIR . '/includes/class-tzcat-settings.php';
-		#require_once GTT_PLUGIN_DIR . '/includes/class-tzcat-settings-page.php';
+		return array_merge( $fonts, self::fonts() );
 
 	}
 
 	/**
-	 * Setup Action Hooks
-	 *
-	 * @see https://codex.wordpress.org/Function_Reference/add_action WordPress Codex
-	 * @return void
+	 * Enqueue fonts.
 	 */
-	static function setup_actions() {
+	static function enqueue_fonts() {
 
-		// Change Archive Titles based on user settings.
-		#add_filter( 'get_the_archive_title', array( __CLASS__, 'custom_archive_titles' ) );
+		// Return early if the current theme does not support the plugin.
+		if ( ! current_theme_supports( 'gt-typography' ) ) {
+			return;
+		}
 
-		// Add Settings link to Plugin actions.
-		#add_filter( 'plugin_action_links_' . plugin_basename( GTT_PLUGIN_FILE ), array( __CLASS__, 'plugin_action_links' ) );
+		$theme_support = get_theme_support( 'gt-typography' );
 
-	}
+		// Return if there are no selected fonts.
+		if ( ! ( isset( $theme_support[0]['selected_fonts'] ) && is_array( $theme_support[0]['selected_fonts'] ) ) ) {
+			return;
+		}
 
-	/**
-	 * Add Settings link to the plugin actions
-	 *
-	 * @return array $actions Plugin action links
-	 */
-	static function plugin_action_links( $actions ) {
+		// Get selected fonts.
+		$selected_fonts = $theme_support[0]['selected_fonts'];
 
-		$settings_link = array( 'settings' => sprintf( '<a href="%s">%s</a>', admin_url( 'options-general.php?page=themezee-gt-typography' ), __( 'Settings', 'gt-typography' ) ) );
+		// Get available fonts.
+		$fonts = self::fonts();
 
-		return array_merge( $settings_link, $actions );
+		if ( array_key_exists( 'Amaranth', $fonts ) && in_array( 'Amaranth', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-amaranth-font', plugins_url( '/assets/css/amaranth.css', __FILE__ ), array(), '8.0' );
+		}
+
+		if ( array_key_exists( 'Lato', $fonts ) && in_array( 'Lato', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-lato-font', plugins_url( '/assets/css/lato.css', __FILE__ ), array(), '14.0' );
+		}
+
+		if ( array_key_exists( 'Montserrat', $fonts ) && in_array( 'Montserrat', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-montserrat-font', plugins_url( '/assets/css/montserrat.css', __FILE__ ), array(), '12.0' );
+		}
+
+		if ( array_key_exists( 'Muli', $fonts ) && in_array( 'Muli', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-muli-font', plugins_url( '/assets/css/muli.css', __FILE__ ), array(), '11.0' );
+		}
+
+		if ( array_key_exists( 'Open Sans', $fonts ) && in_array( 'Open Sans', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-open-sans-font', plugins_url( '/assets/css/open-sans.css', __FILE__ ), array(), '15.0' );
+		}
+
+		if ( array_key_exists( 'Oswald', $fonts ) && in_array( 'Oswald', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-oswald-font', plugins_url( '/assets/css/oswald.css', __FILE__ ), array(), '16.0' );
+		}
+
+		if ( array_key_exists( 'PT Sans', $fonts ) && in_array( 'PT Sans', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-pt-sans-font', plugins_url( '/assets/css/pt-sans.css', __FILE__ ), array(), '9.0' );
+		}
+
+		if ( array_key_exists( 'Raleway', $fonts ) && in_array( 'Raleway', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-raleway-font', plugins_url( '/assets/css/raleway.css', __FILE__ ), array(), '12.0' );
+		}
+
+		if ( array_key_exists( 'Rambla', $fonts ) && in_array( 'Rambla', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-rambla-font', plugins_url( '/assets/css/rambla.css', __FILE__ ), array(), '5.0' );
+		}
+
+		if ( array_key_exists( 'Roboto', $fonts ) && in_array( 'Roboto', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-roboto-font', plugins_url( '/assets/css/roboto.css', __FILE__ ), array(), '18.0' );
+		}
+
+		if ( array_key_exists( 'Titillium Web', $fonts ) && in_array( 'Titillium Web', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-titillium-web-font', plugins_url( '/assets/css/titillium-web.css', __FILE__ ), array(), '6.0' );
+		}
+
+		if ( array_key_exists( 'Ubuntu', $fonts ) && in_array( 'Ubuntu', $selected_fonts, true ) ) {
+			wp_enqueue_style( 'gt-typography-ubuntu-font', plugins_url( '/assets/css/ubuntu.css', __FILE__ ), array(), '12.0' );
+		}
 	}
 }
 
