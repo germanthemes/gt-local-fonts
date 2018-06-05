@@ -56,18 +56,18 @@ class GT_Typography {
 	static function fonts() {
 
 		$fonts = array(
-			'Amaranth'      => 'Amaranth',
-			'Lato'          => 'Lato',
-			'Montserrat'    => 'Montserrat',
-			'Muli'          => 'Muli',
-			'Open Sans'     => 'Open Sans',
-			'Oswald'        => 'Oswald',
-			'PT Sans'       => 'PT Sans',
-			'Raleway'       => 'Raleway',
-			'Rambla'        => 'Rambla',
-			'Roboto'        => 'Roboto',
-			'Titillium Web' => 'Titillium Web',
-			'Ubuntu'        => 'Ubuntu',
+			'Amaranth'      => esc_html__( 'Amaranth', 'gt-typography' ),
+			'Lato'          => esc_html__( 'Lato', 'gt-typography' ),
+			'Montserrat'    => esc_html__( 'Montserrat', 'gt-typography' ),
+			'Muli'          => esc_html__( 'Muli', 'gt-typography' ),
+			'Open Sans'     => esc_html__( 'Open Sans', 'gt-typography' ),
+			'Oswald'        => esc_html__( 'Oswald', 'gt-typography' ),
+			'PT Sans'       => esc_html__( 'PT Sans', 'gt-typography' ),
+			'Raleway'       => esc_html__( 'Raleway', 'gt-typography' ),
+			'Rambla'        => esc_html__( 'Rambla', 'gt-typography' ),
+			'Roboto'        => esc_html__( 'Roboto', 'gt-typography' ),
+			'Titillium Web' => esc_html__( 'Titillium Web', 'gt-typography' ),
+			'Ubuntu'        => esc_html__( 'Ubuntu', 'gt-typography' ),
 		);
 
 		return $fonts;
