@@ -46,6 +46,8 @@ class GT_Typography {
 
 		// Load fonts in frontend.
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'enqueue_fonts' ), 1 );
+
+		// Load fonts in editor.
 		add_action( 'enqueue_block_editor_assets', array( __CLASS__, 'enqueue_fonts' ), 1 );
 	}
 
