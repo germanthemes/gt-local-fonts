@@ -134,115 +134,115 @@ class GermanThemes_Local_Fonts {
 		$fonts = self::fonts();
 
 		if ( array_key_exists( 'Amaranth', $fonts ) && in_array( 'Amaranth', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-amaranth-font', plugins_url( '/assets/css/amaranth.css', __FILE__ ), array(), '8.0' );
+			wp_enqueue_style( 'gt-local-fonts-amaranth', plugins_url( '/assets/css/amaranth.css', __FILE__ ), array(), '8.0' );
 		}
 
 		if ( array_key_exists( 'Arimo', $fonts ) && in_array( 'Arimo', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-arimo-font', plugins_url( '/assets/css/arimo.css', __FILE__ ), array(), '11.0' );
+			wp_enqueue_style( 'gt-local-fonts-arimo', plugins_url( '/assets/css/arimo.css', __FILE__ ), array(), '11.0' );
 		}
 
 		if ( array_key_exists( 'Crimson Text', $fonts ) && in_array( 'Crimson Text', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-crimson-text-font', plugins_url( '/assets/css/crimson-text.css', __FILE__ ), array(), '8.0' );
+			wp_enqueue_style( 'gt-local-fonts-crimson-text', plugins_url( '/assets/css/crimson-text.css', __FILE__ ), array(), '8.0' );
 		}
 
 		if ( array_key_exists( 'Dosis', $fonts ) && in_array( 'Dosis', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-dosis-font', plugins_url( '/assets/css/dosis.css', __FILE__ ), array(), '7.0' );
+			wp_enqueue_style( 'gt-local-fonts-dosis', plugins_url( '/assets/css/dosis.css', __FILE__ ), array(), '7.0' );
 		}
 
 		if ( array_key_exists( 'Fira Sans', $fonts ) && in_array( 'Fira Sans', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-fira-sans-font', plugins_url( '/assets/css/fira-sans.css', __FILE__ ), array(), '8.0' );
+			wp_enqueue_style( 'gt-local-fonts-fira-sans', plugins_url( '/assets/css/fira-sans.css', __FILE__ ), array(), '8.0' );
 		}
 
 		if ( array_key_exists( 'Hind', $fonts ) && in_array( 'Hind', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-hind-font', plugins_url( '/assets/css/hind.css', __FILE__ ), array(), '8.0' );
+			wp_enqueue_style( 'gt-local-fonts-hind', plugins_url( '/assets/css/hind.css', __FILE__ ), array(), '8.0' );
 		}
 
 		if ( array_key_exists( 'Inconsolata', $fonts ) && in_array( 'Inconsolata', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-inconsolata-font', plugins_url( '/assets/css/inconsolata.css', __FILE__ ), array(), '16.0' );
+			wp_enqueue_style( 'gt-local-fonts-inconsolata', plugins_url( '/assets/css/inconsolata.css', __FILE__ ), array(), '16.0' );
 		}
 
 		if ( array_key_exists( 'Indie Flower', $fonts ) && in_array( 'Indie Flower', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-indie-flower-font', plugins_url( '/assets/css/indie-flower.css', __FILE__ ), array(), '9.0' );
+			wp_enqueue_style( 'gt-local-fonts-indie-flower', plugins_url( '/assets/css/indie-flower.css', __FILE__ ), array(), '9.0' );
 		}
 
 		if ( array_key_exists( 'Josefin Sans', $fonts ) && in_array( 'Josefin Sans', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-josefin-sans-font', plugins_url( '/assets/css/josefin-sans.css', __FILE__ ), array(), '12.0' );
+			wp_enqueue_style( 'gt-local-fonts-josefin-sans', plugins_url( '/assets/css/josefin-sans.css', __FILE__ ), array(), '12.0' );
 		}
 
 		if ( array_key_exists( 'Lato', $fonts ) && in_array( 'Lato', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-lato-font', plugins_url( '/assets/css/lato.css', __FILE__ ), array(), '14.0' );
+			wp_enqueue_style( 'gt-local-fonts-lato', plugins_url( '/assets/css/lato.css', __FILE__ ), array(), '14.0' );
 		}
 
 		if ( array_key_exists( 'Libre Baskerville', $fonts ) && in_array( 'Libre Baskerville', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-libre-baskerville-font', plugins_url( '/assets/css/libre-baskerville.css', __FILE__ ), array(), '5.0' );
+			wp_enqueue_style( 'gt-local-fonts-libre-baskerville', plugins_url( '/assets/css/libre-baskerville.css', __FILE__ ), array(), '5.0' );
 		}
 
 		if ( array_key_exists( 'Lobster Two', $fonts ) && in_array( 'Lobster Two', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-lobster-two-font', plugins_url( '/assets/css/lobster-two.css', __FILE__ ), array(), '10.0' );
+			wp_enqueue_style( 'gt-local-fonts-lobster-two', plugins_url( '/assets/css/lobster-two.css', __FILE__ ), array(), '10.0' );
 		}
 
 		if ( array_key_exists( 'Merriweather', $fonts ) && in_array( 'Merriweather', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-merriweather-font', plugins_url( '/assets/css/merriweather.css', __FILE__ ), array(), '19.0' );
+			wp_enqueue_style( 'gt-local-fonts-merriweather', plugins_url( '/assets/css/merriweather.css', __FILE__ ), array(), '19.0' );
 		}
 
 		if ( array_key_exists( 'Montserrat', $fonts ) && in_array( 'Montserrat', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-montserrat-font', plugins_url( '/assets/css/montserrat.css', __FILE__ ), array(), '12.0' );
+			wp_enqueue_style( 'gt-local-fonts-montserrat', plugins_url( '/assets/css/montserrat.css', __FILE__ ), array(), '12.0' );
 		}
 
 		if ( array_key_exists( 'Muli', $fonts ) && in_array( 'Muli', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-muli-font', plugins_url( '/assets/css/muli.css', __FILE__ ), array(), '11.0' );
+			wp_enqueue_style( 'gt-local-fonts-muli', plugins_url( '/assets/css/muli.css', __FILE__ ), array(), '11.0' );
 		}
 
 		if ( array_key_exists( 'Nunito', $fonts ) && in_array( 'Nunito', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-nunito-font', plugins_url( '/assets/css/nunito.css', __FILE__ ), array(), '9.0' );
+			wp_enqueue_style( 'gt-local-fonts-nunito', plugins_url( '/assets/css/nunito.css', __FILE__ ), array(), '9.0' );
 		}
 
 		if ( array_key_exists( 'Open Sans', $fonts ) && in_array( 'Open Sans', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-open-sans-font', plugins_url( '/assets/css/open-sans.css', __FILE__ ), array(), '15.0' );
+			wp_enqueue_style( 'gt-local-fonts-open-sans', plugins_url( '/assets/css/open-sans.css', __FILE__ ), array(), '15.0' );
 		}
 
 		if ( array_key_exists( 'Oswald', $fonts ) && in_array( 'Oswald', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-oswald-font', plugins_url( '/assets/css/oswald.css', __FILE__ ), array(), '16.0' );
+			wp_enqueue_style( 'gt-local-fonts-oswald', plugins_url( '/assets/css/oswald.css', __FILE__ ), array(), '16.0' );
 		}
 
 		if ( array_key_exists( 'Philosopher', $fonts ) && in_array( 'Philosopher', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-philosopher-font', plugins_url( '/assets/css/philosopher.css', __FILE__ ), array(), '9.0' );
+			wp_enqueue_style( 'gt-local-fonts-philosopher', plugins_url( '/assets/css/philosopher.css', __FILE__ ), array(), '9.0' );
 		}
 
 		if ( array_key_exists( 'Poppins', $fonts ) && in_array( 'Poppins', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-poppins-font', plugins_url( '/assets/css/poppins.css', __FILE__ ), array(), '5.0' );
+			wp_enqueue_style( 'gt-local-fonts-poppins', plugins_url( '/assets/css/poppins.css', __FILE__ ), array(), '5.0' );
 		}
 
 		if ( array_key_exists( 'PT Sans', $fonts ) && in_array( 'PT Sans', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-pt-sans-font', plugins_url( '/assets/css/pt-sans.css', __FILE__ ), array(), '9.0' );
+			wp_enqueue_style( 'gt-local-fonts-pt-sans', plugins_url( '/assets/css/pt-sans.css', __FILE__ ), array(), '9.0' );
 		}
 
 		if ( array_key_exists( 'Quicksand', $fonts ) && in_array( 'Quicksand', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-quicksand-font', plugins_url( '/assets/css/quicksand.css', __FILE__ ), array(), '7.0' );
+			wp_enqueue_style( 'gt-local-fonts-quicksand', plugins_url( '/assets/css/quicksand.css', __FILE__ ), array(), '7.0' );
 		}
 
 		if ( array_key_exists( 'Raleway', $fonts ) && in_array( 'Raleway', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-raleway-font', plugins_url( '/assets/css/raleway.css', __FILE__ ), array(), '12.0' );
+			wp_enqueue_style( 'gt-local-fonts-raleway', plugins_url( '/assets/css/raleway.css', __FILE__ ), array(), '12.0' );
 		}
 
 		if ( array_key_exists( 'Rambla', $fonts ) && in_array( 'Rambla', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-rambla-font', plugins_url( '/assets/css/rambla.css', __FILE__ ), array(), '5.0' );
+			wp_enqueue_style( 'gt-local-fonts-rambla', plugins_url( '/assets/css/rambla.css', __FILE__ ), array(), '5.0' );
 		}
 
 		if ( array_key_exists( 'Roboto', $fonts ) && in_array( 'Roboto', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-roboto-font', plugins_url( '/assets/css/roboto.css', __FILE__ ), array(), '18.0' );
+			wp_enqueue_style( 'gt-local-fonts-roboto', plugins_url( '/assets/css/roboto.css', __FILE__ ), array(), '18.0' );
 		}
 
 		if ( array_key_exists( 'Signika', $fonts ) && in_array( 'Signika', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-signika-font', plugins_url( '/assets/css/signika.css', __FILE__ ), array(), '8.0' );
+			wp_enqueue_style( 'gt-local-fonts-signika', plugins_url( '/assets/css/signika.css', __FILE__ ), array(), '8.0' );
 		}
 
 		if ( array_key_exists( 'Titillium Web', $fonts ) && in_array( 'Titillium Web', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-titillium-web-font', plugins_url( '/assets/css/titillium-web.css', __FILE__ ), array(), '6.0' );
+			wp_enqueue_style( 'gt-local-fonts-titillium-web', plugins_url( '/assets/css/titillium-web.css', __FILE__ ), array(), '6.0' );
 		}
 
 		if ( array_key_exists( 'Ubuntu', $fonts ) && in_array( 'Ubuntu', $selected_fonts, true ) ) {
-			wp_enqueue_style( 'gt-local-ubuntu-font', plugins_url( '/assets/css/ubuntu.css', __FILE__ ), array(), '12.0' );
+			wp_enqueue_style( 'gt-local-fonts-ubuntu', plugins_url( '/assets/css/ubuntu.css', __FILE__ ), array(), '12.0' );
 		}
 	}
 }
