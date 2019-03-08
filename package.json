@@ -1,0 +1,9 @@
+{
+  "name": "gt-local-fonts",
+  "version": "1.0.0",
+  "scripts": {
+    "export": "git archive HEAD -9 --prefix gt-local-fonts/ --format=zip > ../gt-local-fonts.zip"
+  },
+  "author": "GermanThemes",
+  "license": "GPL"
+}

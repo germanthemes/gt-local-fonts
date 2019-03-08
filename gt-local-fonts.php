@@ -5,7 +5,7 @@ Plugin URI: https://germanthemes.de/gt-local-fonts/
 Description: Adds additional local fonts to the typography options of GermanThemes.
 Author: GermanThemes
 Author URI: https://germanthemes.de/
-Version: 0.9
+Version: 1.0
 Text Domain: gt-local-fonts
 Domain Path: /languages/
 License: GNU General Public License v2 or later

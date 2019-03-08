@@ -1,7 +1,7 @@
 === GT Local Fonts ===
 Author URI: https://germanthemes.de
 Plugin URI: https://germanthemes.de/gt-local-fonts/
-Contributors: germanthemes
+Contributors: GermanThemes
 Tags: fonts, typography
 Requires at least: 5.0
 Tested up to: 5.1
